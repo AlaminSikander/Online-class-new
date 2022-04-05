@@ -48,8 +48,11 @@
                                 <tr>
                                     <th>Student ID</th>
                                     <th>Name</th>
+                                    <th>Gender</th>
                                     <th>Class</th>
                                     <th>Email ID</th>
+                                    <th>Mobile Number</th>
+                                    <th>Address</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
@@ -68,8 +71,12 @@
                                         </h2>
 
                                     </td>
+                                    <td>{{$a -> gender}}</td>
+                                    <td>{{$a -> subject}}</td>
                                     <td>{{$a->class}}</td>
                                     <td>{{$a->email}}</td>
+                                    <td>{{$a -> mobile}}</td>
+                                    <td>{{$a -> address}}</td>
                                     <td class="text-end">
                                         <div class="actions">
                                             @if($a->status == 'pending')

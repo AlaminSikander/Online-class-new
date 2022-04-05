@@ -1,130 +1,109 @@
-<header class="header-wrap style1">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="header-top-left">
-                    <div class="close-header-top xl-none">
-                        <button type="button"><i class="las la-times"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-            </div>
 
-        </div>
-    </div>
-    </div>
-    <div class="header-bottom py-3 border-bottom border-5" style="background-color: #7F8C8D">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-2 col-md-4 col-6 order-lg-1 order-md-1 order-1">
-                    <!-- <div class="logo">
-                        <a href="index.html"><img src="{{('/img/logo.png')}}" alt="Image"></a>
-                    </div> -->
-                </div>
-                <div class="">
-                    <!-- <div class="col-lg-6 col-md-3 col-6 order-lg-2 order-md-3 order-3"> -->
-                    <div class="main-menu-wrap style1 ">
-                        <div class="menu-close xl-none">
-                            <a href="javascript:void(0)"><i class="las la-times"></i></a>
-                        </div>
-                        <div id="menu" class="text-left d-flex justify-content-around align-items-center">
-                            <div class="logo">
-                                <a href="index.html"><img src="{{url('/img/logo-web.png')}}" alt="Image" width="70px" class="rounded-circle"></a>
+<div class="fix">
+      <div class="side-info">
+         <div class="side-info-content">
+            <div class="offset-widget offset-logo mb-40">
+               <div class="row align-items-center">
+                  <div class="col-9">
+                     <a href="{{route('website.home')}}">
+                        <img src="{{url('backend/img/logo4.png')}}" width="180px" alt="Logo">
+                     </a>
+                  </div>
+                  <div class="col-3 text-end"><button class="side-info-close"><i class="fal fa-times"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="mobile-menu d-xl-none fix"></div>
+            
+         </div>
+      </div>
+   </div>
+   <div class="offcanvas-overlay"></div>
+   <div class="offcanvas-overlay-white"></div>
+
+<header>
+    <div class="header-area header-transparent sticky-header">
+        <div class="container-fluid">
+            <div class="header-main-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-xl-9 col-lg-7 col-md-5 col-sm-9 col-9">
+                        <div class="header-left d-flex align-items-center">
+                            <div class="header-logo">
+                                <a href="{{route('website.home')}}"><img src="{{url('backend/img/logo4.png')}}" width="210px" alt="logo"></a>
                             </div>
-                            <ul class="main-menu ">
-                                <li>
-                                    <a href="{{route('website.home')}}">HOME</a>
+                            <div class="pl-4 main-menu d-none d-xl-block pt-25">
+                                <nav id="mobile-menu ">
+                                    <ul>
+                                        <li class=""><a href="{{route('website.home')}}">Home</a>
+                                        </li>
+                                        <li class=""><a href="{{route('website.about')}}">About Us</a>
+                                        </li>
 
-                                </li>
-                                
+                                        @if(auth()->user() && auth()->user()->role == "student")
+                                        @if(auth()->user())
+                                        <li class=""><a href="{{route('website.profile')}}">Profile</a></li>
+                                        <li class=""><a href="{{route('website.routine')}}">Class Schedule</a></li>
+                                        <li class=""><a href="{{route('website.exam')}}">Exam</a></li>
+                                        <li class=""><a href="{{route('website.result')}}">Result</a></li>
+                                        <li class=""><a href="{{route('user.logout')}}">Logout</a></li>
+                                        @else
+                                        <li class=""> <a class="" href="{{route('user.login')}}">SignIn</a></li>
+                                      
+                                        @endif
 
-                                <li class=""><a href="{{route('website.about')}}">About Us</a>
-                                    
-                                </li>
-                                <li><a href="{{route('website.student.signup')}}">Registration</a></li>
-
-
-
-                                @if(auth()->user() && auth()->user()->role == "student")
-                                    @if(auth()->user())
-                                    <li><a  href="{{route('website.routine')}}">Routine</a></li>
-                                    <li><a href="{{route('website.profile')}}">Profile</a></li>
-                                    <li><a  href="{{route('website.result')}}">Result</a></li>
-                                    <li><a  href="{{route('website.exam')}}">Exam</a></li>
-                                    <li ><a  href="{{route('user.logout')}}">logout</a> </li>
-
-                                    @else
-                                     <li><a href="{{route('user.login')}}">Login</a></li>
-                                          
-                                    @endif
-
-                                @else
-                                    @if(auth()->user())
-                                    <li><a  href="{{route('website.teacherprofile')}}">Profile</a></li>
-                                    <li><a  href="{{route('website.teacher.routine')}}">Routine</a></li>
-                                    <li><a  href="{{route('website.teacher.exam')}}">exam</a></li>
-
-                                    <li><a  href="{{route('website.teacher.result')}}">Result</a></li>
-                                    <li><a  href="{{route('user.logout')}}">logout</a></li>
-
-                                    @else
-                                    <li><a href="{{route('user.login')}}"> User Login</a></li>
-   
-                                    @endif
+                                        @else
+                                        @if(auth()->user())
+                                        <li class=""><a href="{{route('website.teacherprofile')}}">Profile</a></li>
+                                        <li class=""><a href="{{route('website.teacher.routine')}}">Class Schedule</a></li>
+                                        <li class=""><a href="{{route('website.teacher.exam')}}">Exam</a></li>
+                                        <li class=""><a href="{{route('website.teacher.result')}}">Result</a></li>
+                                        <li class=""><a href="{{route('user.logout')}}">Logout</a></li>
+                                        @else
+                                        <li class=""> <a class="" href="{{route('user.login')}}">SignIn</a></li>
+                                        @endif
+                                        @endif
 
 
-                                @endif
-
-
-                                <li>
-                                    <a href="{{route('admin.login')}}">Admin Login</a>
-
-                                </li>
-
-                                
-
-                            </ul>
-                            </li>
-                            </ul>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="mobile-bar-wrap">
-                        <div class="sidebar-menu xl-none">
-                            <i class="ri-equalizer-line"></i>
+                    <div class="col-xl-3 col-lg-5 col-md-7 col-sm-3 col-3">
+                        <div class="header-right d-flex align-items-center justify-content-end">
+                            <div class="user-btn-inner p-relative d-none d-md-block">
+                                <div class="user-btn-wrapper">
+                                    <div class="user-btn-content ">
+                                        <a class="user-btn-sign-in" href="{{route('admin.login')}}">Admin Sign In</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <a class="user-btn-sign-up edu-btn" href="{{route('website.student.signup')}}">Student
+                                    Sign Up</a>
+                            </div>
+                            <div class="menu-bar d-xl-none ml-20">
+                                <a class="side-toggle" href="javascript:void(0)">
+                                    <div class="bar-icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="mobile-top-bar xl-none">
-                            <i class="ri-settings-3-line"></i>
-                        </div>
-                        <div class="mobile-menu xl-none">
-                            <a href='javascript:void(0)'><i class="ri-menu-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-5  order-lg-3 order-md-2">
-                    <div class="header-menu-wrap">
-                        <div class="header-search md-none">
-                            <!-- @if(auth()->user())
-                                <a class="btn btn-primary" href="{{route('user.logout')}}">logout</a>
-                                <a class="btn btn-primary" href="{{route('website.routine')}}">Routine</a>
-                                <a class="btn btn-primary" href="{{route('website.profile')}}">Profile</a>
-                                <a class="btn btn-primary" href="{{route('website.result')}}">Result</a>
-                                @else
-                                    <a href="{{route('user.login')}}">Login</a>
-                            @endif -->
-                        </div>
-
                     </div>
                 </div>
             </div>
         </div>
+       
     </div>
     @if(session()->has('error'))
-    <p class="alert alert-danger">{{session()->get('error')}}</p>
-    @endif
-
-    @if(session()->has('msg'))
-    <p class="alert alert-success">{{session()->get('msg')}}</p>
-    @endif
+        <p class="alert alert-danger">{{session()->get('error')}}</p>
+        @endif
+    
+        @if(session()->has('msg'))
+        <p class="alert alert-success">{{session()->get('msg')}}</p>
+        @endif
 </header>

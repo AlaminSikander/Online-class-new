@@ -3,99 +3,82 @@
 
 
 
-<!DOCTYPE html>
-<html lang="zxx">
+    <title>Online Class Admin - Login</title>
 
-<!-- Mirrored from templates.hibootstrap.com/ecour/default/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Dec 2021 14:34:07 GMT -->
+<link rel="shortcut icon" href="{{url('backend/img/favicon.png')}}">
+
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+
+<link rel="stylesheet" href="{{url('backend/plugins/bootstrap/css/bootstrap.min.css')}}">
+
+<link rel="stylesheet" href="{{url('backend/plugins/fontawesome/css/fontawesome.min.css')}}">
+<link rel="stylesheet" href="{{url('backend/plugins/fontawesome/css/all.min.css')}}">
+
+<link rel="stylesheet" href="{{url('backend/css/style.css')}}">
 
 <body>
 
+<div class="main-wrapper login-body">
+    <div class="login-wrapper">
+        <div class="container">
+            <div class="loginbox">
+                <div class="login-left">
+                    <img class="img-fluid" src="{{url('backend/img/logo3.png')}}" alt="Logo">
+                </div>
+                <div class="login-right">
+                @if(session()->has('msg'))
+                        <p class="alert alert-success">
+                            {{session()->get('msg')}}
+                        </p>
+                        @endif
+    
+                        @if(session()->has('error'))
+                        <p class="alert alert-danger">
+                            {{session()->get('error')}}
+                        </p>
+                        @endif
+                    <div class="login-right-wrap">
+                        <h1>Login</h1>
+                        <p class="account-subtitle">Access to our dashboard</p>
+                        
+    
+                        <form action="{{route('admin.do.login')}}" method="post">
+                        @csrf
+                            <div class="form-group">
+                                <input name="email" class="form-control" type="text" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" name="password" type="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" type="submit">Login</button>
+                            </div>
+                        </form>
 
-<div class="page-wrapper">
+                        <div class="text-center forgotpass"><a href="forgot-password.html">Forgot Password?</a>
+                        </div>
+                        <div class="login-or">
+                            <span class="or-line"></span>
+                            <span class="span-or">or</span>
+                        </div>
 
-
-
-
-
-
-
-<section class="Login-wrap pt-100 pb-100">
-<div class="container">
-<div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-8 offset-md-2">
-<div class="login-form">
-<div class="login-header bg-blue">
-<h2 class="text-center mb-0">Log In</h2>
-</div>
-<div class="login-body">
-<form class="form-wrap" action="{{route('user.do.login')}}" method="post">
-  @csrf
-<div class="row">
-<div class="col-lg-12">
-<div class="form-group">
-<label for="email">Email Address</label>
-<input required id="email" name="email" type="email" placeholder="Email Address" >
-</div>
-</div>
-
-<div class="col-lg-12">
-<div class="form-group">
-<label for="pwd">Password</label>
-<input required name="password" type="password" placeholder="Password">
-</div>
-</div>
-
-             
-
-
-
-                
-<!-- <div class="col-lg-6 col-md-6 col-6 text-end mb-20">
-<a href="forgot-pwd.html" class="link">Forgot Password?</a>
-</div> -->
-<div class="col-lg-12">
-<div class="form-group">
-<button class="btn v1">Log In</button>
-</div>
-</div>
-
-
-<div class="col-md-12 text-center">
-<p class="mb-0">Don’t Have an Account? <a class="link" href="{{route('website.student.signup')}}">Create One</a></p>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-
-
-
+                        <div class="text-center dont-have">Don’t have an account? <a
+                        href="{{route('website.student.signup')}}">Register</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<a href="#" class="back-to-top bounce"><i class="las la-arrow-up"></i></a>
+<script src="{{url('backend/js/jquery-3.6.0.min.js')}}"></script>
 
+<script src="{{url('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery.min.js"></script>
-
-<script src="assets/js/jquery-ui.min.js"></script>
-
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/form-validator.min.js"></script>
-<script src="assets/js/contact-form-script.js"></script>
-
-<script src="assets/js/swiper-min.js"></script>
-
-<script src="assets/js/jquery-magnific-popup.js"></script>
-
-<script src="assets/js/countdown.js"></script>
-
-<script src="assets/js/main.js"></script>
+<script src="{{url('backend/js/script.js')}}"></script>
 </body>
 
-<!-- Mirrored from templates.hibootstrap.com/ecour/default/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Dec 2021 14:34:08 GMT -->
-</html>
+
 @endsection
