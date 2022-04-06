@@ -3,10 +3,21 @@
 
 <main>
     <!-- hero-area-start -->
- 
+    <div class="hero-arera course-item-height" data-background="{{url('assets/img/slider/course-slider.jpg')}}">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="hero-course-1-text">
+                     <h2>About</h2>
+                  </div>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
 
     <!-- student-choose-area start -->
-    <div class="student-choose-area fix pt-190 pb-90">
+    <div class="student-choose-area fix pt-110 pb-90">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5 col-lg-5">
@@ -261,7 +272,7 @@
     <!-- features-video-area-end -->
 
     <!-- counter-area start -->
-    <div class="counter-area pt-120 pb-75">
+    <div class="counter-area pt-100 pb-75">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">

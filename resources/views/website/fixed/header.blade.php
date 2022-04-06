@@ -18,11 +18,10 @@
          </div>
       </div>
    </div>
-   <div class="offcanvas-overlay"></div>
-   <div class="offcanvas-overlay-white"></div>
+   
 
 <header>
-    <div class="header-area header-transparent sticky-header">
+    <div class="header-area sticky-header">
         <div class="container-fluid">
             <div class="header-main-wrapper">
                 <div class="row align-items-center">

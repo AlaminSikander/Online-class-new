@@ -1,139 +1,75 @@
 @extends('website.master')
 @section('content')
 
-<div class="container">
-  <style type="text/css">
-    body{
-    margin-top:20px;
-    color: #1a202c;
-    text-align: left;
-    background-color: #e2e8f0;    
-}
-.main-body {
-    padding: 15px;
-}
-.card {
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
-
-.card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1rem;
-}
-
-.gutters-sm {
-    margin-right: -8px;
-    margin-left: -8px;
-}
-
-.gutters-sm>.col, .gutters-sm>[class*=col-] {
-    padding-right: 8px;
-    padding-left: 8px;
-}
-.mb-3, .my-3 {
-    margin-bottom: 1rem!important;
-}
-
-.bg-gray-300 {
-    background-color: #e2e8f0;
-}
-.h-100 {
-    height: 100%!important;
-}
-.shadow-none {
-    box-shadow: none!important;
-}
-  </style>
-    <div class="main-body">
-    
-          
-    
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <img src="{{url('/uploads/',auth()->user()->image)}}" alt="Admin" class="rounded-circle" width="150">
-                    <div class="mt-3">
-                      <h4>{{auth()->user()->name}}</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-primary">Follow</button>
-                      <button class="btn btn-outline-primary">Message</button>
-                    </div>
+<main>
+      <!-- hero-area-start -->
+      <div class="hero-arera course-item-height" data-background="{{url('assets/img/slider/course-slider.jpg')}}">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="hero-course-1-text">
+                     <h2>Instructor</h2>
                   </div>
-                </div>
-              </div>
-              
+                  <div class="course-title-breadcrumb">
+                     
+                  </div>
+               </div>
             </div>
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Full Name</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                    {{auth()->user()->name}}
-                    </div>
+         </div>
+      </div>
+      <!-- hero-area-end -->
+      <!-- course-detailes-area-start -->
+      <div class="course-detalies-area pt-120 pb-100">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3">
+                  <div class="course-instructors-img mb-30">
+                     <img src="{{url('/uploads/',auth()->user()->image)}}" alt="nstructors-img">
                   </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                    {{auth()->user()->email}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                    {{auth()->user()->mobile}}
-                    </div>
-                  </div>
-                  
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                    {{auth()->user()->address}}
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <a class="btn btn-info "  href="{{route('website.teacher.profile.edit',auth()->user()->id)}}">Edit</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+               </div>
+               <div class="col-xl-8 col-lg-9">
+                  <div class="course-detelies-wrapper">
+                     <div class="course-detiles-tittle mb-30">
+                        <h3>{{auth()->user()->name}}</h3>
+                        <span>{{auth()->user()->subject}}</span><br><br>
+                        <ul>
+                           <li>
+                               <span class="title-span">Full Name : </span>
+                               <span class="info-span">{{auth()->user()->name}}</span>
+                           </li>
 
-             
-
-
-
+                           <li>
+                               <span class="title-span">Mobile : </span>
+                               <span class="info-span">{{auth()->user()->mobile}}</span>
+                           </li>
+                           <li>
+                               <span class="title-span">Email : </span>
+                               <span class="info-span">{{auth()->user()->email}}</span>
+                           </li>
+                           <li>
+                               <span class="title-span">Gender : </span>
+                               <span class="info-span">{{auth()->user()->gender}}</span>
+                           </li>
+                       </ul>
+                     </div>
+                     
+                     <div class="course-bio-text pt-45 pb-20">
+                        <p>Hello, I am {{auth()->user()->name}}. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maiores id quo optio illum vero odit et recusandae dolore quod earum, animi sequi est ut? Cum ipsa dignissimos dolorum tenetur laborum deleniti optio quia, totam sapiente velit hic nam quasi, tempore commodi sequi vero corporis ut ullam distinctio amet. Quasi ut distinctio enim vel eaque deleniti porro veniam ducimus laudantium.</p>
+                     </div>
+                     <div class="course-bio-text pt-45 pb-20">
+                        <h3>Address</h3>
+                        <p>{{auth()->user()->address}}</p>
+                     </div>
+                     <div class="col-auto text-end float-end ms-auto">
+                        <a href="{{route('website.teacher.profile.edit',auth()->user()->id)}}" class="btn btn-outline-primary me-2"><i
+                                class="fas fa-pen"></i>
+                            Edit Info</a>
+                    </div>
+                  </div>
+               </div>
             </div>
-          </div>
-
-        </div>
-    </div>
+         </div>
+      </div>
+      <!-- course-detailes-area- end -->
+   </main>
 @endsection

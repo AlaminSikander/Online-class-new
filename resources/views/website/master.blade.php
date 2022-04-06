@@ -82,8 +82,9 @@
     <header>
         @include('website.fixed.header')
     </header>
-
+<main>
     @yield('content')
+</main>
    
 
 
