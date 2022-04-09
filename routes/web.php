@@ -183,6 +183,9 @@ Route::group(['middleware'=>['auth','admin']],function(){
    Route::get('/admin/subject',[SubjectController::class,'subject'])->name('admin.subject');
    Route::get('/admin/subject/add',[SubjectController::class,'subjectAdd'])->name('admin.subject.add');
    Route::post('/admin/subject/store',[SubjectController::class,'store'])->name('admin.subject.store');
+   Route::get('/admin/subject/delete/{id}',[SubjectController::class,'delete'])->name('admin.subject.delete');
+   Route::get('/admin/subject/edit/{id}',[SubjectController::class,'edit'])->name('admin.subject.edit');
+   Route::put('/admin/subject/update/{id}',[SubjectController::class,'update'])->name('admin.subject.update');
   
   
    //class

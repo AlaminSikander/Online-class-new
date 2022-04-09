@@ -61,7 +61,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="subject" class="form-control select">
+                                    <select required name="subject" class="form-control select">
                                         <option>Select One</option>
                                         <option>Bangla</option>
                                         <option>English</option>
@@ -76,19 +76,19 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Link</label>
-                                    <input type="text" name="link" class="form-control">
+                                    <input required type="text" name="link" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <input name="date" type="date" class="form-control">
+                                    <input required name="date" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Time</label>
-                                    <input name="time" type="time" class="form-control">
+                                    <input required name="time" type="time" class="form-control">
                                 </div>
                             </div>
                             

@@ -38,7 +38,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" value="{{$exam->class}}" class="form-control select">
+                                    <select required name="class" value="{{$exam->class}}" class="form-control select">
                                         <option value="">Select Class</option>
                                         <option @if($exam->class == "1") selected @endif>1</option>
                                         <option @if($exam->class == "2") selected @endif>2</option>
@@ -73,25 +73,25 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Link</label>
-                                    <input type="text" name="link" value="{{$exam->link}}" class="form-control">
+                                    <input required type="text" name="link" value="{{$exam->link}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Start Time</label>
-                                    <input name="start_time" type="time" value="{{$exam->start_time}}" class="form-control">
+                                    <input required name="start_time" type="time" value="{{$exam->start_time}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>End Time</label>
-                                    <input name="end_time" value="{{$exam->end_time}}" type="time" class="form-control">
+                                    <input required name="end_time" value="{{$exam->end_time}}" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <input name="date" value="{{$exam->date}}" type="date" class="form-control">
+                                    <input required name="date" value="{{$exam->date}}" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

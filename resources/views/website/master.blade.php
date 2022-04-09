@@ -12,26 +12,10 @@
     <title>Online Class Management System</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link
-        href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;family=Poppins:wght@200;300;400;500;600;700;800&amp;display=swap"
-        rel="stylesheet">
+    
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
 
-    <link href="{{url('/css/website/bootstrap.min.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/jquery-ui-min.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/line-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{url('/css/website/remixicon.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/animate.min.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/swiper-min.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/magnific-popup.css')}}" rel="stylesheet">
-
-    <link href="{{url('/css/website/style.css')}}" rel="stylesheet">
 
     <!-- new  -->
 
@@ -72,6 +56,18 @@
 	<link rel="stylesheet" type="text/css" href="{{url('assets2/vendors/revolution/css/settings.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{url('assets2/vendors/revolution/css/navigation.css')}}">
 
+	<!-- more new  -->
+	<link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&amp;display=swap">
+
+    <link rel="stylesheet" href="{{url('backend/plugins/bootstrap/css/bootstrap.min.css')}}">
+
+    <link rel="stylesheet" href="{{url('backend/plugins/fontawesome/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{url('backend/plugins/fontawesome/css/all.min.css')}}">
+
+    <link rel="stylesheet" href="{{url('backend/css/style.css')}}">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+
 </head>
 
 <body>
@@ -96,31 +92,13 @@
 
 
 
-    <footer>
         @include('website.fixed.footer')
-    </footer>
 
 
 
     <!-- <a href="#" class="back-to-top bounce"><i class="las la-arrow-up"></i></a> -->
 
 
-    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{url('/js/website/jquery.min.js')}}"></script>
-
-    <script src="{{url('/js/website/jquery-ui.min.js')}}"></script>
-
-    <script src="{{url('/js/website/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{url('/js/website/form-validator.min.js')}}"></script>
-    <script src="{{url('/js/website/contact-form-script.js')}}"></script>
-
-    <script src="{{url('/js/website/swiper-min.js')}}"></script>
-
-    <script src="{{url('/js/website/jquery-magnific-popup.js')}}"></script>
-
-    <script src="{{url('/js/website/countdown.js')}}"></script>
-
-    <script src="{{url('/js/website/main.js')}}"></script>
 
     <!-- New JS here -->
     <script src="{{url('assets/js/vendor/jquery-3.6.0.min.js')}}"></script>
@@ -260,6 +238,63 @@
 			}
 		});
 	</script>
+
+
+<!-- NEW ADMIN  -->
+
+
+<script src="{{url('backend/js/jquery-3.6.0.min.js')}}"></script>
+
+    <script src="{{url('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="{{url('backend/plugins/slimscroll/jquery.slimscroll.min.js')}}"></script>
+
+    <script src="{{url('backend/plugins/apexchart/apexcharts.min.js')}}"></script>
+    <script src="{{url('backend/plugins/apexchart/chart-data.js')}}"></script>
+
+    <script src="{{url('backend/js/script.js')}}"></script>
+    <script src="https://kit.fontawesome.com/dd47e0ca00.js" crossorigin="anonymous"></script>
+
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() ==
+                            "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date()
+                                .valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        } else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+        // ]]>
+
+    </script>
 </body>
 
 <!-- Mirrored from templates.hibootstrap.com/ecour/default/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 03 Dec 2021 14:33:46 GMT -->

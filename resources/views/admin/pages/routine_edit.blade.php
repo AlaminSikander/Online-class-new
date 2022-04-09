@@ -27,7 +27,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" value="{{$routine->class}}" class="form-control select">
+                                    <select required name="class" value="{{$routine->class}}" class="form-control select">
                                         <option value="">Select Class</option>
                                         <option @if($routine->class == "1") selected @endif>1</option>
                                         <option @if($routine->class == "2") selected @endif>2</option>
@@ -47,7 +47,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="subject" value="{{$routine->subject}}" class="form-control select">
+                                    <select required name="subject" value="{{$routine->subject}}" class="form-control select">
                                     <option @if($routine->subject == "Select One") selected @endif>Select One</option>
                                         <option @if($routine->subject == "Bangla") selected @endif>Bangla</option>
                                         <option @if($routine->subject == "English") selected @endif>English</option>
@@ -62,19 +62,19 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Link</label>
-                                    <input type="text" name="link" value="{{$routine->link}}" class="form-control">
+                                    <input required type="text" name="link" value="{{$routine->link}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Date</label>
-                                    <input name="date" value="{{$routine->date}}" type="date" class="form-control">
+                                    <input required name="date" value="{{$routine->date}}" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Time</label>
-                                    <input type="time" name="time" value="{{$routine->time}}" class="form-control">
+                                    <input required type="time" name="time" value="{{$routine->time}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

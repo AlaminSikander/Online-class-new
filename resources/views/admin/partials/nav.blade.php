@@ -20,6 +20,9 @@
                             Schedule</span></a>
                 </li>
                 <li class="">
+                    <a href="{{route('admin.subject')}}"><i class="fas fa-table"></i> <span>Subject</span></a>
+                </li>
+                <li class="">
                     <a href="{{route('admin.routine')}}"><i class="fas fa-table"></i> <span>Class
                             Schedule</span></a>
                 </li>

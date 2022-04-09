@@ -27,19 +27,19 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="name" value="{{$result->name}}" class="form-control">
+                                    <input required type="text" name="name" value="{{$result->name}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Student ID</label>
-                                    <input type="text" name="user_id" value="{{$result->user_id}}" class="form-control">
+                                    <input required type="text" name="user_id" value="{{$result->user_id}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" value="{{$result->class}}" class="form-control select">
+                                    <select required name="class" value="{{$result->class}}" class="form-control select">
                                         <option value="">Select Class</option>
                                         <option @if($result->class == "1") selected @endif>1</option>
                                         <option @if($result->class == "2") selected @endif>2</option>
@@ -74,13 +74,13 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Grade</label>
-                                    <input type="text" name="link" value="{{$result->grade}}" class="form-control">
+                                    <input required type="text" name="link" value="{{$result->grade}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Status</label>
-                                    <input name="start_time" type="time" value="{{$result->status}}" class="form-control">
+                                    <input required name="start_time" type="time" value="{{$result->status}}" class="form-control">
                                 </div>
                             </div>
                             

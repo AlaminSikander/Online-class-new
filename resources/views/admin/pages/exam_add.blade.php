@@ -54,7 +54,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" class="form-control select">
+                                    <select required name="class" class="form-control select">
                                         <option>Select Class</option>
                                         <option>1</option>
                                         <option>2</option>
@@ -90,25 +90,25 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Exam Link</label>
-                                    <input type="text" name="link" class="form-control">
+                                    <input required required type="text" name="link" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Start Time</label>
-                                    <input name="start_time" type="time" class="form-control">
+                                    <input required name="start_time" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>End Time</label>
-                                    <input name="end_time" type="time" class="form-control">
+                                    <input required name="end_time" type="time" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Exam Date</label>
-                                    <input name="date" type="date" class="form-control">
+                                    <input required name="date" type="date" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

@@ -27,7 +27,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input type="text" value="{{$users->name}}" name="name" class="form-control">
+                                <input  type="text" value="{{$users->name}}" name="name" class="form-control">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
@@ -88,7 +88,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Address</label>
-                                <input name="address"  value="{{$users->address}}" type="text" class="form-control">
+                                <input required name="address"  value="{{$users->address}}" type="text" class="form-control">
                             </div>
                         </div>
                         

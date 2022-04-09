@@ -53,7 +53,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" class="form-control select">
+                                    <select required name="class" class="form-control select">
                                         <option>Select Class</option>
                                         <option>1</option>
                                         <option>2</option>

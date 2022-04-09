@@ -1,5 +1,8 @@
+@extends('website.master')
+@section('content')
 
-    <title>Online Class Admin - Login</title>
+
+<title>Online Class Admin - Login</title>
 
 <link rel="shortcut icon" href="{{url('backend/img/favicon.png')}}">
 
@@ -76,3 +79,4 @@
 <script src="{{url('backend/js/script.js')}}"></script>
 </body>
 
+@endsection

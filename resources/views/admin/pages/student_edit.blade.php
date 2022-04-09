@@ -28,7 +28,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input type="text" name="name" value="{{$users->name}}" class="form-control">
+                                    <input required type="text" name="name" value="{{$users->name}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -40,7 +40,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Gender</label>
-                                    <select name="gender" value="{{$users->gender}}" class="form-control select">
+                                    <select required name="gender" value="{{$users->gender}}" class="form-control select">
                                         <option @if($users->gender == "Male") selected @endif>Male</option>
                                         <option @if($users->gender == "Female") selected @endif>Female</option>
                                         <option @if($users->gender == "Others") selected @endif>Others</option>
@@ -50,13 +50,13 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Birth Date</label>
-                                    <input type="date" name="birth" value="{{$users->birth}}" class="form-control">
+                                    <input required type="date" name="birth" value="{{$users->birth}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Class</label>
-                                    <select name="class" value="{{$users->class}}" class="form-control select">
+                                    <select required name="class" value="{{$users->class}}" class="form-control select">
                                         <option value="">Select Class</option>
                                         <option @if($users->class == "1") selected @endif>1</option>
                                         <option @if($users->class == "2") selected @endif>2</option>
@@ -76,56 +76,56 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mobile Number</label>
-                                    <input type="text" name="mobile" value="{{$users->mobile}}" class="form-control">
+                                    <input required type="text" name="mobile" value="{{$users->mobile}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Join Date</label>
-                                    <input type="date" name="join" value="{{$users->join}}" class="form-control">
+                                    <input required type="date" name="join" value="{{$users->join}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Email ID</label>
-                                    <input type="email" name="email" value="{{$users->email}}" class="form-control">
+                                    <input required type="email" name="email" value="{{$users->email}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="text" name="password" value="{{$users->password}}" class="form-control">
+                                    <input required type="text" name="password" value="{{$users->password}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Father Name</label>
-                                    <input type="text" name="father_name" value="{{$users->father_name}}" class="form-control">
+                                    <input required type="text" name="father_name" value="{{$users->father_name}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Father Mobile Number</label>
-                                    <input type="text" name="father_mobile" value="{{$users->father_mobile}}" class="form-control">
+                                    <input required type="text" name="father_mobile" value="{{$users->father_mobile}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mother Name</label>
-                                    <input type="text" name="mother_name" value="{{$users->mother_name}}" class="form-control">
+                                    <input required type="text" name="mother_name" value="{{$users->mother_name}}" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mother Mobile Number</label>
-                                    <input type="text" name="mother_mobile" value="{{$users->mother_mobile}}" class="form-control">
+                                    <input required type="text" name="mother_mobile" value="{{$users->mother_mobile}}" class="form-control">
                                 </div>
                             </div>
                             
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Address</label>
-                                    <input type="text" name="address" value="{{$users->address}}"  class="form-control">
+                                    <input required type="text" name="address" value="{{$users->address}}"  class="form-control">
                                 </div>
                             </div>
                             
