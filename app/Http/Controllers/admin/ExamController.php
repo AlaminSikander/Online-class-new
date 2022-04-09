@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Exam;
+use App\Models\Subject;
 
 class ExamController extends Controller
 {
@@ -17,11 +18,14 @@ class ExamController extends Controller
                 return view('admin.layouts.exam',compact('exam'));
             }
         $exam=Exam::all();
+        // dd($exam);
         return view('admin.layouts.exam',compact('exam'));
     }
     public function examAdd()
    {
-       return view('admin.pages.exam_add');
+        $subjects = Subject::all();
+        
+       return view('admin.pages.exam_add', compact('subjects'));
    }
    public function store(Request $request)
    {
@@ -30,7 +34,7 @@ class ExamController extends Controller
            
             'exam_name'=>'required',
             'class'=>'required',
-            'subject'=>'required',
+            'subject_id'=>'required',
             'start_time'=>'required',
             'end_time'=>'required',
             'date'=>'required',
@@ -40,7 +44,7 @@ class ExamController extends Controller
 
             'exam_name'=>$request->exam_name,
             'class'=>$request->class,
-            'subject'=>$request->subject,
+            'subject_id'=> $request->subject_id,
             'start_time'=>$request->start_time,
             'end_time'=>$request->end_time,
             'date'=>$request->date,
@@ -54,20 +58,22 @@ class ExamController extends Controller
    public function edit($id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $exam=Exam::find($id);
        //dd($users);
-       return view('admin.pages.exam_edit',compact('exam'));
+       return view('admin.pages.exam_edit',compact('exam','subjects'));
    }
 
    public function update(Request $request,$id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $exam=Exam::find($id);
        $exam->update([
           
         'exam_name'=>$request->exam_name,
         'class'=>$request->class,
-        'subject'=>$request->subject,
+        'subject_id'=> $request->subject_id,
         'start_time'=>$request->start_time,
         'end_time'=>$request->end_time,
         'date'=>$request->date,

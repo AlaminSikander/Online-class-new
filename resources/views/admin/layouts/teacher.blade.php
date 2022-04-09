@@ -72,7 +72,7 @@
 
                                     </td>
                                     <td>{{$a -> gender}}</td>
-                                    <td>{{$a -> subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
 
                                     <td>{{$a->email}}</td>
                                     <td>{{$a -> mobile}}</td>

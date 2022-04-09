@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Result;
+use App\Models\Subject;
 
 class ResultController extends Controller
 {
@@ -23,7 +24,8 @@ class ResultController extends Controller
 
     public function resultAdd()
     {
-        return view('admin.pages.result_add');
+        $subjects = Subject::all();
+        return view('admin.pages.result_add', compact('subjects'));
     }
 
 
@@ -45,21 +47,23 @@ class ResultController extends Controller
     public function edit($id)
     {
         //dd("$user_id");
+        $subjects = Subject::all();
         $result=Result::find($id);
         //dd($users);
-        return view('admin.pages.result_edit',compact('result'));
+        return view('admin.pages.result_edit',compact('result','subjects'));
     }
  
     public function update(Request $request,$id)
     {
         //dd("$user_id");
+        $subjects = Subject::all();
         $result=Result::find($id);
         $result->update([
            
             'name'=>$request-> name,
             'user_id'=>$request-> user_id,
             'class'=>$request-> class,
-            'subject'=>$request->subject,
+            'subject_id'=> $request->subject_id,
             'grade'=>$request->grade,
             'status'=>$request->status,
             

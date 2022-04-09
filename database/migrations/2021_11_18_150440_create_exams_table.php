@@ -17,7 +17,7 @@ class CreateExamsTable extends Migration
             $table->id();
             $table->string('exam_name');
             $table->double('class');
-            $table->string('subject');
+            $table->foreignId('subject_id');
             $table->string('start_time');
             $table->string('end_time');
             $table->string('date');

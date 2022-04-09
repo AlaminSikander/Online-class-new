@@ -16,11 +16,11 @@
                             Teachers</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.exam')}}"><i class="fas fa-table"></i> <span>Exam
-                            Schedule</span></a>
+                    <a href="{{route('admin.subject')}}"><i class="fas fa-table"></i> <span>Subject</span></a>
                 </li>
                 <li class="">
-                    <a href="{{route('admin.subject')}}"><i class="fas fa-table"></i> <span>Subject</span></a>
+                    <a href="{{route('admin.exam')}}"><i class="fas fa-table"></i> <span>Exam
+                            Schedule</span></a>
                 </li>
                 <li class="">
                     <a href="{{route('admin.routine')}}"><i class="fas fa-table"></i> <span>Class

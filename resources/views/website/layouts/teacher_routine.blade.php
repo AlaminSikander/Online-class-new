@@ -37,7 +37,7 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$a->class}}</td>
-                                    <td>{{$a->subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->link}}</td>
                                     <td>{{$a->date}}</td>
                                     <td>{{$a->time}}</td>

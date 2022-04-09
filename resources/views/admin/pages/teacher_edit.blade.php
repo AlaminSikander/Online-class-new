@@ -37,20 +37,16 @@
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <select name="subject" value="{{$users->subject}}" class="form-control select">
-                                    <option @if($users->subject == "Select One") selected @endif>Select One</option>
-                                    <option @if($users->subject == "Bangla") selected @endif>Bangla</option>
-                                    <option @if($users->subject == "English") selected @endif>English</option>
-                                    <option @if($users->subject == "Math") selected @endif>Math</option>
-                                    <option @if($users->subject == "Science") selected @endif>Science</option>
-                                    <option @if($users->subject == "Social Science") selected @endif>Social Science</option>
-                                    <option @if($users->subject == "Relegion") selected @endif>Relegion</option>
-                                    <option @if($users->subject == "Ict") selected @endif>Ict</option>
-                                </select>
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}" {{$sub->id == $users->subject_id ? 'selected' : ''}}>
+                                            {{$sub->subject_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                             </div>
-                        </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Gender</label>

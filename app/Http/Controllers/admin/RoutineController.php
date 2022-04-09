@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Routine;
+use App\Models\Subject;
 
 class RoutineController extends Controller
 {
@@ -22,13 +23,14 @@ class RoutineController extends Controller
     }
     public function routineAdd()
     {
-        return view('admin.pages.routine_add');
+        $subjects = Subject::all();
+        return view('admin.pages.routine_add', compact('subjects'));
     }
     public function store(Request $request)
     {
         Routine::create([
             'class'=>$request-> class,
-            'subject'=>$request->subject,
+            'subject_id'=> $request->subject_id,
             'date'=>$request->date,
             'time'=>$request->time,
             'link'=>$request->link,
@@ -40,19 +42,21 @@ class RoutineController extends Controller
     public function edit($id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $routine=Routine::find($id);
        //dd($users);
-       return view('admin.pages.routine_edit',compact('routine'));
+       return view('admin.pages.routine_edit',compact('routine','subjects'));
    }
 
    public function update(Request $request,$id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $routine=Routine::find($id);
        $routine->update([
           
         'class'=>$request-> class,
-        'subject'=>$request->subject,
+        'subject_id'=> $request->subject_id,
         'date'=>$request->date,
         'time'=>$request->time,
         'link'=>$request->link,

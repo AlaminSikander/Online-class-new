@@ -27,7 +27,7 @@
                 <h3 class="page-title">Exam Schedule</h3>
             </div>
             <div class="col-auto text-end float-end ms-auto">
-            <input class="btn btn-primary" type="button" onclick="PrintDiv();" value="Download">
+                <input class="btn btn-primary" type="button" onclick="PrintDiv();" value="Download">
                 <a href="{{route('admin.exam.add')}}" class="btn btn-primary"><i class="fas fa-plus"></i></a>
             </div>
         </div>
@@ -53,28 +53,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($exam as $key=>$a)
+                                @foreach($exam as $key=>$a)
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>
                                         <h2>
-
-                                        {{$a->exam_name}}
+                                            {{$a->exam_name}}
                                         </h2>
-                                        
                                     </td>
                                     <td>{{$a->class}}</td>
-                                    <td>{{$a->subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->link}}</td>
                                     <td>{{$a->start_time}}</td>
                                     <td>{{$a->end_time}}</td>
                                     <td>{{$a->link}}</td>
                                     <td class="text-end">
                                         <div class="actions">
-                                            <a href="{{route('admin.exam.edit',$a->id)}}" class="btn btn-sm bg-success-light me-2">
+                                            <a href="{{route('admin.exam.edit',$a->id)}}"
+                                                class="btn btn-sm bg-success-light me-2">
                                                 <i class="fas fa-pen"></i>
                                             </a>
-                                            <a href="{{route('admin.exam.delete',$a->id)}}" class="btn btn-sm bg-danger-light">
+                                            <a href="{{route('admin.exam.delete',$a->id)}}"
+                                                class="btn btn-sm bg-danger-light">
                                                 <i class="fas fa-trash"></i>
                                             </a>
                                         </div>
@@ -95,7 +95,10 @@
         var divToPrint = document.getElementById('divToPrint');
         var popupWin = window.open('', '_blank', 'width=1500,height=700');
         popupWin.document.open();
-        popupWin.document.write('<html><head><link href="http://localhost/ltms-app/public/css/style.css" rel="stylesheet"></head><body onload="window.print()">' + divToPrint.innerHTML + '</html>');
+        popupWin.document.write(
+            '<html><head><link href="http://localhost/ltms-app/public/css/style.css" rel="stylesheet"></head><body onload="window.print()">' +
+            divToPrint.innerHTML + '</html>');
         popupWin.document.close();
     }
+
 </script>

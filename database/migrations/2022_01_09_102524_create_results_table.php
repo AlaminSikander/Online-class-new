@@ -18,7 +18,7 @@ class CreateResultsTable extends Migration
             $table->string('name');
             $table->string('user_id');
             $table->integer('class');
-            $table->string('subject');
+            $table->foreignId('subject_id');
             $table->string('grade');
             $table->string('status');
             $table->timestamps();

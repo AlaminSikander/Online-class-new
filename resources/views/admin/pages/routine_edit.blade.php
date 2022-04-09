@@ -47,15 +47,11 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select required name="subject" value="{{$routine->subject}}" class="form-control select">
-                                    <option @if($routine->subject == "Select One") selected @endif>Select One</option>
-                                        <option @if($routine->subject == "Bangla") selected @endif>Bangla</option>
-                                        <option @if($routine->subject == "English") selected @endif>English</option>
-                                        <option @if($routine->subject == "Math") selected @endif>Math</option>
-                                        <option @if($routine->subject == "Science") selected @endif>Science</option>
-                                        <option @if($routine->subject == "Social Science") selected @endif>Social Science</option>
-                                        <option @if($routine->subject == "Relegion") selected @endif>Relegion</option>
-                                        <option @if($routine->subject == "Ict") selected @endif>Ict</option>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}" {{$sub->id == $routine->subject_id ? 'selected' : ''}}>
+                                            {{$sub->subject_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

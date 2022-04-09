@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->date('birth')->nullable();
             $table->double('class')->nullable();
-            $table->string('subject')->nullable();
+            $table->foreignId('subject_id')->nullable();
             $table->date('join')->nullable();
             $table->double('mobile')->nullable();
             $table->string('email')->unique();

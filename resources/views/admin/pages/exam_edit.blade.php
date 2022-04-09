@@ -58,15 +58,11 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select required name='subject' value="{{$exam->subject}}" type="text" class="form-control">
-                                        <option @if($exam->subject == "Select One") selected @endif>Select One</option>
-                                        <option @if($exam->subject == "Bangla") selected @endif>Bangla</option>
-                                        <option @if($exam->subject == "English") selected @endif>English</option>
-                                        <option @if($exam->subject == "Math") selected @endif>Math</option>
-                                        <option @if($exam->subject == "Science") selected @endif>Science</option>
-                                        <option @if($exam->subject == "Social Science") selected @endif>Social Science</option>
-                                        <option @if($exam->subject == "Relegion") selected @endif>Relegion</option>
-                                        <option @if($exam->subject == "Ict") selected @endif>Ict</option>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}" {{$sub->id == $exam->subject_id ? 'selected' : ''}}>
+                                            {{$sub->subject_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

@@ -31,7 +31,7 @@
                   <div class="course-detelies-wrapper">
                      <div class="course-detiles-tittle mb-30">
                         <h3>{{auth()->user()->name}}</h3>
-                        <span>{{auth()->user()->subject}}</span><br><br>
+                        <span>{{auth()->user()->subject_id}}</span><br><br>
                         <ul>
                            <li>
                                <span class="title-span">Full Name : </span>

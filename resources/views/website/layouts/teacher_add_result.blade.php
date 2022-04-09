@@ -28,10 +28,16 @@
                 <option>5</option>
             </select>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Subject</label>
-            <input required name='subject' type="text" class="form-control" id="exampleInputPassword1">
-        </div>
+        <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Marks</label>
             <input required name='grade' type="text" class="form-control" id="exampleInputPassword1">

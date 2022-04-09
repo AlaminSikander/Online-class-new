@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Subject;
 class TeachersController extends Controller
 {
     public function teacher(Request $request)
@@ -23,7 +24,8 @@ class TeachersController extends Controller
     }
     public function teacherAdd()
    {
-       return view('admin.pages.teacher_add');
+    $subjects = Subject::all();
+       return view('admin.pages.teacher_add', compact('subjects'));
    }
    public function pending($id)
    {
@@ -44,21 +46,23 @@ class TeachersController extends Controller
    public function edit($id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $users=User::find($id);
        //dd($users);
-       return view('admin.pages.teacher_edit',compact('users'));
+       return view('admin.pages.teacher_edit',compact('users','subjects'));
    }
 
    public function update(Request $request,$id)
    {
        //dd("$user_id");
+       $subjects = Subject::all();
        $users=User::find($id);
        $users->update([
           
            'name'=>$request->name,
        'gender'=>$request->gender,
        'mobile'=>$request->mobile,
-       'subject'=>$request->subject,
+       'subject_id'=> $request->subject_id,
        'email'=>$request->email,
        'password'=>$request->password,
        'address'=>$request->address,

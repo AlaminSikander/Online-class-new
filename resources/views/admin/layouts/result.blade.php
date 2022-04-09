@@ -60,7 +60,7 @@
                                     <td>{{$a->name}}</td>
                                     <td>{{$a->user_id}}</td>
                                     <td>{{$a->class}}</td>
-                                    <td>{{$a->subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->grade}}</td>
                                     <td>{{$a->status}}</td>
                                     <td class="text-end">

@@ -45,7 +45,7 @@
 
                                     </td>
                                     <td>{{$a->class}}</td>
-                                    <td>{{$a->subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->link}}</td>
                                     <td>{{$a->start_time}}</td>
                                     <td>{{$a->end_time}}</td>

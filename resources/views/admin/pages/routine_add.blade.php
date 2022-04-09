@@ -61,15 +61,10 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select required name="subject" class="form-control select">
-                                        <option>Select One</option>
-                                        <option>Bangla</option>
-                                        <option>English</option>
-                                        <option>Math</option>
-                                        <option>Science</option>
-                                        <option>Social Science</option>
-                                        <option>Relegion</option>
-                                        <option>Ict</option>
+                                    <select name="subject_id" class="form-control select">
+                                        @foreach($subjects as $sub)
+                                        <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>

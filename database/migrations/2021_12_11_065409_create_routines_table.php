@@ -16,7 +16,7 @@ class CreateRoutinesTable extends Migration
         Schema::create('routines', function (Blueprint $table) {
             $table->id();
             $table->integer('class');
-            $table->string('subject');
+            $table->foreignId('subject_id');
             $table->string('date');
             $table->string('time');
             $table->string('link');

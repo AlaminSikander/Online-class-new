@@ -5,6 +5,7 @@ namespace App\Http\Controllers\website;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Result;
+use App\Models\Subject;
 class TeacherResultController extends Controller
 {
     public function result()
@@ -26,7 +27,7 @@ class TeacherResultController extends Controller
             'name'=>$request-> name,
             'user_id'=>$request-> user_id,
             'class'=>$request-> class,
-            'subject'=>$request->subject,
+            'subject_id'=> $request->subject_id,
             'grade'=>$request->grade,
             'status'=>$request->status,
             
