@@ -10,7 +10,7 @@ class TeacherResultController extends Controller
 {
     public function result()
     {
-        $data=Result::where('subject',auth()->user()->subject)->get();
+        $data=Result::where('subject_id',auth()->user()->subject_id)->get();
 
         return view('website.layouts.teacher_see_result',compact('data'));
     }

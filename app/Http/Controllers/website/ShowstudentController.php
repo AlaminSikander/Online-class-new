@@ -42,7 +42,7 @@ class ShowstudentController extends Controller
         'gender'=>$request->gender,
         'birth'=>$request->birth,
         'class'=>$request->class,
-        'subject'=>$request->subject,
+        'subject_id'=>$request->subject_id,
         'join'=>$request->join,
         'mobile'=>$request->mobile,
         'role'=>$request->role,

@@ -49,9 +49,7 @@
                                     <th>Subject</th>
                                     <th>Link</th>
                                     <th>Teacher Name</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
-                                    <th>Date</th>
+                                    <th>Class Time</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
@@ -60,7 +58,7 @@
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$a->class}}</td>
-                                    <td>{{$a->subject}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->link}}</td>
                                     <td>{{$a->date}}</td>
                                     <td>{{$a->time}}</td>

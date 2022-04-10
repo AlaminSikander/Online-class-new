@@ -14,7 +14,7 @@ class TeacherRoutineController extends Controller
     public function routine()
     {
         
-        $data=Routine::where('subject',auth()->user()->subject)->get();
+        $data=Routine::where('subject_id',auth()->user()->subject_id)->get();
         return view('website.layouts.teacher_routine',compact('data'));
     }
 
@@ -22,7 +22,7 @@ class TeacherRoutineController extends Controller
     public function exam()
     {
         
-        $exam=Exam::where('subject',auth()->user()->subject)->get();
+        $exam=Exam::where('subject_id',auth()->user()->subject_id)->get();
         return view('website.layouts.teacher_exam',compact('exam'));
     }
 

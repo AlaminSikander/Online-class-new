@@ -1,24 +1,23 @@
-
 <div class="fix">
-      <div class="side-info">
-         <div class="side-info-content">
+    <div class="side-info">
+        <div class="side-info-content">
             <div class="offset-widget offset-logo mb-40">
-               <div class="row align-items-center">
-                  <div class="col-9">
-                     <a href="{{route('website.home')}}">
-                        <img src="{{url('backend/img/logo4.png')}}" width="180px" alt="Logo">
-                     </a>
-                  </div>
-                  <div class="col-3 text-end"><button class="side-info-close"><i class="fal fa-times"></i></button>
-                  </div>
-               </div>
+                <div class="row align-items-center">
+                    <div class="col-9">
+                        <a href="{{route('website.home')}}">
+                            <img src="{{url('backend/img/logo4.png')}}" width="180px" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="col-3 text-end"><button class="side-info-close"><i class="fal fa-times"></i></button>
+                    </div>
+                </div>
             </div>
             <div class="mobile-menu d-xl-none fix"></div>
-            
-         </div>
-      </div>
-   </div>
-   
+
+        </div>
+    </div>
+</div>
+
 
 <header>
     <div class="header-area sticky-header">
@@ -28,7 +27,8 @@
                     <div class="col-xl-9 col-lg-7 col-md-5 col-sm-9 col-10">
                         <div class="header-left d-flex align-items-center">
                             <div class="header-logo">
-                                <a href="{{route('website.home')}}"><img src="{{url('backend/img/logo4.png')}}" width="210px" alt="logo"></a>
+                                <a href="{{route('website.home')}}"><img src="{{url('backend/img/logo4.png')}}"
+                                        width="210px" alt="logo"></a>
                             </div>
                             <div class="pl-4 main-menu d-none d-xl-block pt-25">
                                 <nav id="mobile-menu ">
@@ -46,19 +46,22 @@
                                         <li class=""><a href="{{route('website.result')}}">Result</a></li>
                                         <li class=""><a href="{{route('user.logout')}}">Logout</a></li>
                                         @else
-                                        <li class=""  style="display:none;"> <a class="" href="{{route('user.login')}}">SignIn</a></li>
-                                      
+                                        <li class="" style="display:none;"> <a class=""
+                                                href="{{route('user.login')}}">SignIn</a></li>
+
                                         @endif
 
                                         @else
                                         @if(auth()->user())
                                         <li class=""><a href="{{route('website.teacherprofile')}}">Profile</a></li>
-                                        <li class=""><a href="{{route('website.teacher.routine')}}">Class Schedule</a></li>
+                                        <li class=""><a href="{{route('website.teacher.routine')}}">Class Schedule</a>
+                                        </li>
                                         <li class=""><a href="{{route('website.teacher.exam')}}">Exam</a></li>
                                         <li class=""><a href="{{route('website.teacher.result')}}">Result</a></li>
                                         <li class=""><a href="{{route('user.logout')}}">Logout</a></li>
                                         @else
-                                        <li class="" style="display:none;"> <a class="" href="{{route('user.login')}}">SignIn</a></li>
+                                        <li class="" style="display:none;"> <a class=""
+                                                href="{{route('user.login')}}">SignIn</a></li>
                                         @endif
                                         @endif
 
@@ -96,13 +99,13 @@
                 </div>
             </div>
         </div>
-       
+
     </div>
     @if(session()->has('error'))
-        <p class="alert alert-danger">{{session()->get('error')}}</p>
-        @endif
-    
-        @if(session()->has('msg'))
-        <p class="alert alert-success">{{session()->get('msg')}}</p>
-        @endif
+    <p class="alert alert-danger">{{session()->get('error')}}</p>
+    @endif
+
+    @if(session()->has('msg'))
+    <p class="alert alert-success">{{session()->get('msg')}}</p>
+    @endif
 </header>
