@@ -1,8 +1,19 @@
 @extends('website.master')
 @section('content')
+<div class="hero-arera course-item-height" data-background="{{url('assets/img/slider/course-slider.jpg')}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-course-1-text">
+                    <h2>Add Result</h2>
+                </div>
 
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="content container-fluid">
+<div class="content container-fluid pt-30 pb-30">
 
     <div class="page-header">
         <div class="row align-items-center">
@@ -17,7 +28,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{route('admin.result.store')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('website.teacher.result.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-12">
@@ -59,7 +70,7 @@
                                 <div class="form-group">
                                     <label>Subject</label>
                                     <select name="subject_id" class="form-control select">
-                                        @foreach($subject as $sub)
+                                        @foreach($subjects as $sub)
                                         <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
                                         @endforeach
                                     </select>

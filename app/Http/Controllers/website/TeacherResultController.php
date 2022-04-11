@@ -17,7 +17,8 @@ class TeacherResultController extends Controller
 
     public function resultAdd()
     {
-        return view('website.layouts.teacher_add_result');
+        $subjects = Subject::all();
+        return view('website.layouts.teacher_add_result', compact('subjects'));
     }
 
 
