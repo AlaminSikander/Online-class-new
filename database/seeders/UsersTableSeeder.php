@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
         'status'=>'yes',
         'role'=>'admin',
         'address'=>'uttara',
-        'image'=>'laboni',
+        'image'=>'alamin',
         
 
        ]);

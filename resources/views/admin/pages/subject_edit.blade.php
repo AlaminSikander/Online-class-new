@@ -25,7 +25,17 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject Name</label>
-                                    <input required value="{{$subject->subject_name}}" name="subject_name" type="text" class="form-control">
+                                    <!-- <input required value="{{$subject->subject_name}}" name="subject_name" type="text" class="form-control"> -->
+                                    <select required value="{{$subject->subject_name}}" name="subject_name" class="form-control select">
+                                        <option value="" >Select Subject</option>
+                                        <option @if($subject->subject_name == "Bangla") selected @endif>Bangla</option>
+                                        <option @if($subject->subject_name == "English") selected @endif>English</option>
+                                        <option @if($subject->subject_name == "Math") selected @endif>Math</option>
+                                        <option @if($subject->subject_name == "Science") selected @endif>Science</option>
+                                        <option @if($subject->subject_name == "Social Science") selected @endif>Social Science</option>
+                                        <option @if($subject->subject_name == "Relegion") selected @endif>Relegion</option>
+                                        <option @if($subject->subject_name == "Ict") selected @endif>Ict</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">

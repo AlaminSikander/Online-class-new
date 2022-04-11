@@ -2,61 +2,98 @@
 @section('content')
 
 
-<div class="container my-5">
+<div class="content container-fluid">
 
-    <form action="{{route('website.teacher.result.store')}}" method='post'>
-        @csrf
+    <div class="page-header">
+        <div class="row align-items-center">
+            <div class="col">
+                <h3 class="page-title">Add Result</h3>
 
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Name</label>
-            <input required name='name' type="text" class="form-control" id="exampleInputPassword1">
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Student ID</label>
-            <input required name='user_id' type="text" class="form-control" id="exampleInputPassword1">
-        </div>
+    </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Class</label>
-            <select required name='class' type="number" class="form-control" id="exampleInputEmail1"
-                aria-describedby="emailHelp">
-                <option>Select one</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
-        </div>
-        <div class="col-12 col-sm-6">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <form action="{{route('admin.result.store')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="form-title"><span>Basic Details</span></h5>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input required type="text" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Student ID</label>
+                                    <input required type="text" name="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Class</label>
+                                    <select required name="class" class="form-control select">
+                                        <option>Select Class</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
                                     <select name="subject_id" class="form-control select">
-                                        @foreach($subjects as $sub)
+                                        @foreach($subject as $sub)
                                         <option value="{{$sub->id}}">{{$sub->subject_name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Marks</label>
-            <input required name='grade' type="text" class="form-control" id="exampleInputPassword1">
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Grade</label>
+                                    <input required name="grade" type="string" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select required name='status' type="text" class="form-control">
+                                        <option>Select One</option>
+                                        <option>Excellent</option>
+                                        <option>Very good</option>
+                                        <option>Good</option>
+                                        <option>Poor</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Status</label>
-            <select required name='status' type="text" class="form-control" id="exampleInputPassword1">
-                <option>Select one</option>
-                <option>Excellent</option>
-                <option>Very good</option>
-                <option>Good</option>
-                <option>Poor</option>
-            </select>
-        </div>
-
-
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
+    </div>
 </div>
+
 @endsection

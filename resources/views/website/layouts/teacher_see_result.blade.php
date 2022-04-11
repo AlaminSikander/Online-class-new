@@ -26,14 +26,14 @@
                         <table class="table table-hover table-center mb-0 datatable">
                             <thead>
                                 <tr>
-                                    <th">ID</th>
-                                        <th">Name</th>
-                                            <th">Student ID</th>
-                                                <th">Class</th>
-                                                    <th">Subject</th>
-                                                        <th">Grade</th>
-                                                            <th">Status</th>
-                                                                <th">Action</th>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Student ID</th>
+                                    <th>Class</th>
+                                    <th>Subject</th>
+                                    <th>Grade</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>

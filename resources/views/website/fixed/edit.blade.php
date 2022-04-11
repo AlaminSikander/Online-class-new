@@ -1,137 +1,48 @@
-<div class="content container-fluid">
-
-    <div class="page-header">
-        <div class="row align-items-center">
-            <div class="col">
-                <h3 class="page-title">Student Signup From</h3>
+<div class="hero-arera course-item-height" data-background="{{url('assets/img/slider/course-slider.jpg')}}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="hero-course-1-text">
+                    <h2>Class Schedule</h2>
+                </div>
 
             </div>
         </div>
     </div>
-
-    <div class="row">
+</div>
+<div class="content container-fluid pt-30 pb-30">
+    <div id="divToPrint" class="row">
         <div class="col-sm-12">
-            <div class="card">
+            <div class="card card-table">
                 <div class="card-body">
-                    <form action="{{route('user.signup.store')}}" method='POST' enctype="multipart/form-data">
-                        @csrf
-                        <div class="row">
-                            <div class="col-12">
-                                <h5 class="form-title"><span>Student Information</span></h5>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Student ID</label>
-                                    <input required type="text" name="user_id" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input required type="text" name="name" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Image</label>
-                                    <input required name="image" type="file" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Gender</label>
-                                    <select required name="gender" class="form-control select">
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                        <option>Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Date of Birth</label>
-                                    <input required name="birth" type="date" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Class</label>
-                                    <select required name="class" class="form-control select">
-                                        <option>Select one</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Mobile Number</label>
-                                    <input required name="mobile" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Joining Date</label>
-                                    <input required name="join" type="date" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input required name="email" type="email" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input required name="password" type="password" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <h5 class="form-title"><span>Parent Information</span></h5>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Father's Name</label>
-                                    <input required name="father_name" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Father's Mobile</label>
-                                    <input required name="father_mobile" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Mother's Name</label>
-                                    <input required name="mother_name" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Mother's Mobile</label>
-                                    <input required name="mother_mobile" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="form-group">
-                                    <label>Address</label>
-                                    <input required name="address" type="string" class="form-control">
-                                </div>
-                            </div>
-                            <div>
-                                <input hidden value="student" name="role" type="text" class="form-control">
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </div>
-                    </form>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Class</th>
+                                    <th>Subject</th>
+                                    <th>Link</th>
+                                    <th>Teacher Name</th>
+                                    <th>Start Time</th>
+                                    <th>End Time</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($data as $key=>$a)
+                                <tr>
+                                    <td>{{$key+1}}</td>
+                                    <td>{{$a->class}}</td>
+                                    <td>{{optional($a -> subject)->subject_name}}</td>
+                                    <td>{{$a->link}}</td>
+                                    <td>{{$a->date}}</td>
+                                    <td>{{$a->time}}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

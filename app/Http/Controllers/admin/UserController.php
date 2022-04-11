@@ -52,7 +52,7 @@ class UserController extends Controller
         $users=User::find($user_id);
         $users->update([
            
-            'name'=>$request->name,
+        'name'=>$request->name,
         'gender'=>$request->gender,
         'birth'=>$request->birth,
         'class'=>$request->class,

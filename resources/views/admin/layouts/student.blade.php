@@ -72,7 +72,6 @@
 
                                     </td>
                                     <td>{{$a -> gender}}</td>
-                                    <td>{{$a -> subject}}</td>
                                     <td>{{$a->class}}</td>
                                     <td>{{$a->email}}</td>
                                     <td>{{$a -> mobile}}</td>
