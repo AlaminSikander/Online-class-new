@@ -20,6 +20,7 @@ class TeachersController extends Controller
             // dd($teacher);
 
             $users = User::all();
+            // dd($users);
         return view('admin.layouts.teacher',compact('users'));
     }
     public function teacherAdd()
@@ -39,8 +40,10 @@ class TeachersController extends Controller
    {
        //dd("$user_id");
        $users=User::find($id);
-       //dd($users);
-       return view('admin.pages.teacher_view',compact('users'));
+    //    dd($users);
+       $subjects = Subject::all();
+
+       return view('admin.pages.teacher_view',compact('users','subjects'));
    }
 
    public function edit($id)

@@ -27,10 +27,10 @@
                                     <th>Exam Name</th>
                                     <th>Class</th>
                                     <th>Subject</th>
-                                    <th>Exam Link</th>
                                     <th>Start Time</th>
                                     <th>End Time</th>
                                     <th>Date</th>
+                                    <th>Exam Link</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -46,10 +46,10 @@
                                     </td>
                                     <td>{{$a->class}}</td>
                                     <td>{{optional($a -> subject)->subject_name}}</td>
-                                    <td>{{$a->link}}</td>
                                     <td>{{$a->start_time}}</td>
                                     <td>{{$a->end_time}}</td>
-                                    <td>{{$a->link}}</td>
+                                    <td>{{$a->date}}</td>
+                                    <td><a href="{{$a->link}}" class="btn btn-primary">Join Now</a></td>
 
                                 </tr>
                                 @endforeach

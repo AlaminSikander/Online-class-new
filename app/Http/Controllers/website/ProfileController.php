@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
     public function profile()
     {
-           return view('website.layouts.profile');
+        return view('website.layouts.profile');
     }
 
     public function edit($id)

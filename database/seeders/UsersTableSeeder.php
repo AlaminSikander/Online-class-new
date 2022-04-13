@@ -13,20 +13,19 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-       User::create([
+        User::create([
 
         'name'=>'admin',
         'user_id'=>'nothing',
         'gender'=>'male',
-        'mobile'=>'01645205703',
+        'mobile'=>'01725104909',
         'email'=>'admin@gmail.com',
         'password'=>bcrypt('1234'),
         'status'=>'yes',
         'role'=>'admin',
         'address'=>'uttara',
-        'image'=>'alamin',
+        'image'=>'avatar-01.jpg',
         
-
-       ]);
+        ]);
     }
 }

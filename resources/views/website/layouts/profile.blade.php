@@ -8,7 +8,7 @@
             <div class="row">
                <div class="col-xl-12">
                   <div class="hero-course-1-text">
-                     <h2>Student</h2>
+                     <h2>Student <span class="down-mark-line">Profile</span> </h2>
                   </div>
                   <div class="course-title-breadcrumb">
                      

@@ -48,8 +48,8 @@
                                     <th>Class</th>
                                     <th>Subject</th>
                                     <th>Link</th>
-                                    <th>Teacher Name</th>
                                     <th>Class Time</th>
+                                    <th>Date</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
@@ -60,8 +60,8 @@
                                     <td>{{$a->class}}</td>
                                     <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->link}}</td>
-                                    <td>{{$a->date}}</td>
                                     <td>{{$a->time}}</td>
+                                    <td>{{$a->date}}</td>
                                     
                                     <td class="text-end">
                                         <div class="actions">

@@ -66,7 +66,7 @@
                                     <td>{{$a->link}}</td>
                                     <td>{{$a->start_time}}</td>
                                     <td>{{$a->end_time}}</td>
-                                    <td>{{$a->link}}</td>
+                                    <td>{{$a->date}}</td>
                                     <td class="text-end">
                                         <div class="actions">
                                             <a href="{{route('admin.exam.edit',$a->id)}}"

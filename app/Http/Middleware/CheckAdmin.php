@@ -20,7 +20,7 @@ class CheckAdmin
             return $next($request);
         }
        else{
-           return redirect()->route('website.home')->with('error','Permission Denied');
+           return redirect()->route('website.home')->with('msg','Login Sucessfully');
        }
     }
 }

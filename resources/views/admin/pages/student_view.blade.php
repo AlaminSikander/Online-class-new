@@ -60,7 +60,7 @@
                                         <span class="info-span">{{$users->father_name}}</span>
                                     </li>
                                     <li>
-                                        <span class="title-span">Father Mobile Number : </span>
+                                        <span class="title-span">Father Number : </span>
                                         <span class="info-span">{{$users->father_mobile}}</span>
                                     </li>
                                     <li>
@@ -69,7 +69,7 @@
                                     </li>
                                     
                                     <li>
-                                        <span class="title-span">Mother Mobile Number : </span>
+                                        <span class="title-span">Mother Number : </span>
                                         <span class="info-span">{{$users->mother_mobile}}</span>
                                     </li>
                                     
@@ -94,7 +94,7 @@
                         </div>
                         
                     </div>
-                  
+
                 </div>
             </div>
         </div>

@@ -26,6 +26,6 @@ class AdminLoginController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('website.home')->with('msg','Logout Sucessfully');
+        return redirect()->route('website.home')->with('error','Logout from Dashboard');
     }
 }

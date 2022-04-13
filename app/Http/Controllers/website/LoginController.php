@@ -31,7 +31,7 @@ class LoginController extends Controller
             else
              {
                 Auth::logout();
-            return redirect()->back()->with('msg','Account created Sucessfully but not approved');
+            return redirect()->route('website.home')->with('msg','Account created Sucessfully but not approved');
             }
             
         }
@@ -40,6 +40,6 @@ class LoginController extends Controller
     }
     public function logout(){
         Auth::logout();
-        return redirect()->route('website.home')->with('msg','Logout Sucessfully');
+        return redirect()->route('website.home')->with('error','Logout Sucessfully');
     }
 }

@@ -43,7 +43,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Student ID</label>
-                                    <input required type="text" name="name" class="form-control">
+                                    <input required type="text" name="user_id" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">

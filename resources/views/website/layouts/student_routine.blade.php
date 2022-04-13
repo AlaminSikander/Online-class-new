@@ -20,16 +20,14 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover table-center mb-0 datatable">
-                            <thead>
+                        <thead>
                                 <tr>
                                     <th>ID</th>
                                     <th>Class</th>
                                     <th>Subject</th>
-                                    <th>Link</th>
-                                    <th>Teacher Name</th>
-                                    <th>Start Time</th>
-                                    <th>End Time</th>
+                                    <th>Class Time</th>
                                     <th>Date</th>
+                                    <th>Class Link</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,9 +36,9 @@
                                     <td>{{$key+1}}</td>
                                     <td>{{$a->class}}</td>
                                     <td>{{optional($a -> subject)->subject_name}}</td>
-                                    <td>{{$a->link}}</td>
-                                    <td>{{$a->date}}</td>
                                     <td>{{$a->time}}</td>
+                                    <td>{{$a->date}}</td>
+                                    <td><a href="{{$a->link}}" class="btn btn-primary">Join Now</a></td>
                                 </tr>
                                 @endforeach
                             </tbody>

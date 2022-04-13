@@ -71,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-
+                    @if(!auth()->user())
                     <div class="col-xl-3 col-lg-5 col-md-7 col-sm-3 col-2">
                         <div class="header-right d-flex align-items-center justify-content-end">
                             <div class="user-btn-inner p-relative d-none d-md-block">
@@ -96,6 +96,9 @@
                             </div>
                         </div>
                     </div>
+                    @else
+                    <div></div>
+                    @endif
                 </div>
             </div>
         </div>
