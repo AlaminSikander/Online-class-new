@@ -51,6 +51,7 @@
                             <div class="form-group">
                                 <label>Gender</label>
                                 <select name="gender" value="{{$users->gender}}" class="form-control select">
+                                <option value="">Select Class</option>
                                     <option @if($users->gender == "Male") selected @endif>Male</option>
                                     <option @if($users->gender == "Female") selected @endif>Female</option>
                                     <option @if($users->gender == "Others") selected @endif>Others</option>
