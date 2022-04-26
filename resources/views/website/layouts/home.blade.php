@@ -62,9 +62,7 @@
                            <a href="instructor.html">Become an instructor
                               and spread your knowledge</a>
                         </div>
-                        <div class="browser-btn">
-                           <a class="course-btn" href="become-instructor.html">View details</a>
-                        </div>
+                        
                      </div>
                   </div>
                </div>
@@ -80,9 +78,6 @@
                               <div class="browser-course-tittle">
                                  <a href="course-details.html">Keep your skilled centers of
                                     excellence competitive</a>
-                              </div>
-                              <div class="browser-btn">
-                                 <a class="course-btn" href="course.html">Browse courses</a>
                               </div>
                            </div>
                         </div>
@@ -114,7 +109,6 @@
                   <div class="education-content mb-30">
                      <p>Helping employees gain skills and providing career development often take a back seat to
                         business priorities but workplace.</p>
-                     <a class="edu-sec-btn" href="about.html">Watch how to start</a>
                   </div>
                </div>
             </div>

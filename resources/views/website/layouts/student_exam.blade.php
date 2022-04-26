@@ -25,7 +25,7 @@
                                 <tr>
                                     <th>Exam ID</th>
                                     <th>Exam Name</th>
-                                    <th>Class</th>
+                                    <!-- <th>Class</th> -->
                                     <th>Subject</th>
                                     <th>Start Time</th>
                                     <th>End Time</th>
@@ -44,7 +44,7 @@
                                         </h2>
 
                                     </td>
-                                    <td>{{$a->class}}</td>
+                                    <!-- <td>{{$a->class}}</td> -->
                                     <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->start_time}}</td>
                                     <td>{{$a->end_time}}</td>

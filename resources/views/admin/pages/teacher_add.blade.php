@@ -70,6 +70,7 @@
                                 <div class="form-group">
                                     <label>Gender</label>
                                     <select required name="gender" class="form-control select">
+                                        <option>Select One</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>Others</option>

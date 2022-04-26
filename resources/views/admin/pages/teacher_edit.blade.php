@@ -27,19 +27,19 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Name</label>
-                                <input  type="text" value="{{$users->name}}" name="name" class="form-control">
+                                <input required  type="text" value="{{$users->name}}" name="name" class="form-control">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Image</label>
-                                <input  name="image" type="file" class="form-control">
+                                <input required name="image" type="file" class="form-control">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Subject</label>
-                                    <select name="subject_id" class="form-control select">
+                                    <select required name="subject_id" class="form-control select">
                                         @foreach($subjects as $sub)
                                         <option value="{{$sub->id}}" {{$sub->id == $users->subject_id ? 'selected' : ''}}>
                                             {{$sub->subject_name}}</option>
@@ -50,7 +50,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Gender</label>
-                                <select name="gender" value="{{$users->gender}}" class="form-control select">
+                                <select required name="gender" value="{{$users->gender}}" class="form-control select">
                                     <option @if($users->gender == "Male") selected @endif>Male</option>
                                     <option @if($users->gender == "Female") selected @endif>Female</option>
                                     <option @if($users->gender == "Others") selected @endif>Others</option>
@@ -60,7 +60,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Mobile</label>
-                                <input name="mobile"  value="{{$users->mobile}}" type="string" class="form-control">
+                                <input required name="mobile"  value="{{$users->mobile}}" type="string" class="form-control">
                             </div>
                         </div>
                         <div class="col-12">
@@ -69,13 +69,13 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Email ID</label>
-                                <input name="email"  value="{{$users->email}}" type="email" class="form-control">
+                                <input required name="email"  value="{{$users->email}}" type="email" class="form-control">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Password</label>
-                                <input name="password" value="{{$users->password}}" type="text" class="form-control">
+                                <input required name="password" value="{{$users->password}}" type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-12">

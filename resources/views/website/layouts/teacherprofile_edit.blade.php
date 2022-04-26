@@ -49,7 +49,7 @@
                             class="rounded-circle p-1 bg-primary" width="110">
                         <div class="mt-3">
                             <h4>{{auth()->user()->name}}</h4>
-                            <p class="text-secondary mb-1">{{auth()->user()->subject_id}}</p>
+                            <!-- <p class="text-secondary mb-1">{{auth()->user()->subject_id}}</p> -->
 
                         </div>
                     </div>

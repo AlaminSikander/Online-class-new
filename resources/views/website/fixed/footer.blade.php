@@ -5,14 +5,14 @@
             <div class="copyright-area">
                <div class="container">
                   <div class="row">
-                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <div class="copyright-text border-line">
                            <p>© Copyrighted & Designed
                               by <a href="https://www.facebook.com/al.amin.73550794"><span>Md. Alamin Sikander</span></a> </p>
                         </div>
                      </div>
-                     <div class="col-xl-4 col-lg-4 col-sm-6">
-                        <div class="copy-right-support border-line-2">
+                     <div class="col-xl-6 col-lg-6 col-sm-6">
+                        <div class="copy-right-support ">
                            <div class="copy-right-svg">
                               <svg xmlns="http://www.w3.org/2000/svg" width="43.945" height="50"
                                  viewBox="0 0 43.945 50">
@@ -61,7 +61,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="col-xl-5 col-lg-5 col-md-12">
+                     <!-- <div class="col-xl-5 col-lg-5 col-md-12">
                         <div class="copyright-subcribe">
                            <form action="#" class="widget__subscribe">
                               <div class="field">
@@ -70,7 +70,7 @@
                               <button type="submit">Subscribe<i class="fas fa-paper-plane"></i></button>
                            </form>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div>

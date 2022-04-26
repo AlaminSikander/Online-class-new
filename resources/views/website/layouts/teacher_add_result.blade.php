@@ -78,7 +78,7 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
-                                    <label>Grade</label>
+                                    <label>Mark</label>
                                     <input required name="grade" type="string" class="form-control">
                                 </div>
                             </div>

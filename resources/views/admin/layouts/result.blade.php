@@ -8,7 +8,7 @@
 @endif
 
 
-<form class="me-5 mt-4" action="{{route('admin.result.add')}}">
+<form class="me-5 mt-4" action="{{route('admin.result')}}">
     <div class="input-group justify-content-end ">
         <div class="form-outline ">
             <input type="text" name="search" class="form-control " placeholder="Search Result">
@@ -48,7 +48,7 @@
                                     <th>Student ID</th>
                                     <th>Class</th>
                                     <th>Subject</th>
-                                    <th>Grade</th>
+                                    <th>Mark</th>
                                     <th>Status</th>
                                     <th class="text-end">Action</th>
                                 </tr>
@@ -56,7 +56,7 @@
                             <tbody>
                                 @foreach($data as $key=>$a)
                                 <tr>
-
+                                    <td>{{$key+1}}</td>
                                     <td>{{$a->name}}</td>
                                     <td>{{$a->user_id}}</td>
                                     <td>{{$a->class}}</td>

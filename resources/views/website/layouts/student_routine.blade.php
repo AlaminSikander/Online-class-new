@@ -23,7 +23,7 @@
                         <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Class</th>
+                                    <!-- <th>Class</th> -->
                                     <th>Subject</th>
                                     <th>Class Time</th>
                                     <th>Date</th>
@@ -34,7 +34,7 @@
                                 @foreach($data as $key=>$a)
                                 <tr>
                                     <td>{{$key+1}}</td>
-                                    <td>{{$a->class}}</td>
+                                    <!-- <td>{{$a->class}}</td> -->
                                     <td>{{optional($a -> subject)->subject_name}}</td>
                                     <td>{{$a->time}}</td>
                                     <td>{{$a->date}}</td>
