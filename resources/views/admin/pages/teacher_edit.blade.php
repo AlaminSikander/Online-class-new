@@ -50,7 +50,12 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Gender</label>
+<<<<<<< HEAD
                                 <select required name="gender" value="{{$users->gender}}" class="form-control select">
+=======
+                                <select name="gender" value="{{$users->gender}}" class="form-control select">
+                                <option value="">Select Class</option>
+>>>>>>> ae62b63b4682610ec514f7eaf00573a109c919b2
                                     <option @if($users->gender == "Male") selected @endif>Male</option>
                                     <option @if($users->gender == "Female") selected @endif>Female</option>
                                     <option @if($users->gender == "Others") selected @endif>Others</option>

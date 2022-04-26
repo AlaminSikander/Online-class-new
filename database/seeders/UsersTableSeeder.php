@@ -27,5 +27,7 @@ class UsersTableSeeder extends Seeder
         'image'=>'avatar-01.jpg',
         
         ]);
+
+        
     }
 }

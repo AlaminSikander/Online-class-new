@@ -41,7 +41,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Teacher ID</label>
-                                    <input required type="text" name="user_id" class="form-control">
+                                    <input required type="number" name="user_id" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -70,7 +70,11 @@
                                 <div class="form-group">
                                     <label>Gender</label>
                                     <select required name="gender" class="form-control select">
+<<<<<<< HEAD
                                         <option>Select One</option>
+=======
+                                    <option >Select One</option>
+>>>>>>> ae62b63b4682610ec514f7eaf00573a109c919b2
                                         <option>Male</option>
                                         <option>Female</option>
                                         <option>Others</option>
@@ -80,7 +84,7 @@
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <label>Mobile</label>
-                                    <input required name="mobile" type="string" class="form-control">
+                                    <input required name="mobile" type="number" class="form-control">
                                 </div>
                             </div>
                             <div class="col-12">

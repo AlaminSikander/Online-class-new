@@ -10,7 +10,7 @@
 <form class="me-5 mt-4" action="{{route('admin.subject')}}">
     <div class="input-group justify-content-end ">
         <div class="form-outline ">
-            <input type="text" name="search" class="form-control " placeholder="Search Teacher">
+            <input type="text" name="search" class="form-control " placeholder="Search Subject">
 
         </div>
         <button type="submit" class="btn btn-primary">
