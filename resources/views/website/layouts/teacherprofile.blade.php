@@ -31,7 +31,8 @@
                   <div class="course-detelies-wrapper">
                      <div class="course-detiles-tittle mb-30">
                         <h3>{{auth()->user()->name}}</h3>
-                        <span>{{auth()->user()->subject_id}}</span><br><br>
+                        <!-- <span>{{auth()->user()->subject_id}}</span> -->
+                        <br><br>
                         <ul>
                            <li>
                                <span class="title-span">Full Name : </span>
@@ -60,11 +61,11 @@
                         <h3>Address</h3>
                         <p>{{auth()->user()->address}}</p>
                      </div>
-                     <div class="col-auto text-end float-end ms-auto">
+                     <!-- <div class="col-auto text-end float-end ms-auto">
                         <a href="{{route('website.teacher.profile.edit',auth()->user()->id)}}" class="btn btn-outline-primary me-2"><i
                                 class="fas fa-pen"></i>
                             Edit Info</a>
-                    </div>
+                    </div> -->
                   </div>
                </div>
             </div>
