@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function dash()
     {
-        $user = User::count();
+        $user = User::where('role','student') ->  orwhere('role','teacher')->count();
         $student=User::where('role','student')->count();
         $teacher=User::where('role','teacher')->count();
 
